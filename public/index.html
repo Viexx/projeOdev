@@ -9,8 +9,19 @@
     <title>Document</title>
 </head>
 <body class="bg-light">
+    <div class="popup">
+        <div class="popup-content">
+            <h1>X</h1>
+            <h2>Kargo Bedava</h2>
+            <img src="/public/img/slider/kargo-bedava-resim-6.jpg" alt="" class="popup_img">
+        </div>
+    </div>
+
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     <section>
-        <img src="img/slider/gif.webp" alt="" class="top_add">
+        <img src="img/slider/gif-2.webp" alt="" class="top_add">
     </section>
     <header>
         <section class="top-bar">
@@ -21,12 +32,12 @@
                     </div>
                     <div class="col-lg-5 order-lg-last col-sm-8 col-8">
                         <div class="text-end">
-                            <a href="" class="btn btn-light">
-                                <i class="fa fa-user"></i> <span class="ms-1 d-none d-sm-inline-block">Hesabım</span>
+                            <a href="kayıt.html" class="btn btn-light">
+                                <i class="fa fa-user"></i> <span class="ms-1 d-none d-sm-inline-block">Kayıt Ol</span>
                             </a>
-                            <a href="" class="btn btn-light">
+                            <!-- <a href="" class="btn btn-light">
                                 <i class="fa fa-heart"></i> <span class="ms-1 d-none d-sm-inline-block">Listem</span>
-                            </a>
+                            </a> -->
                             <a href="" class="btn btn-light">
                                 <i class="fa fa-shopping-cart"></i> <span class="ms-1 d-none d-sm-inline-block">Sepetim</span>
                             </a>
@@ -115,8 +126,7 @@
             </main>
         </div>
     </section>
-
-
+    
      <section class="pt-3">
         <div class="container navbar_gradient_bg mb-2">
             <header>
@@ -130,12 +140,12 @@
                             <img src="img/elektronik/1.jpeg" alt="">
                         </a>
                         <figcaption class="info-wrap border-top">
-                            <a href="#" class="float-end btn btn-light btn-icon">
+                            <!-- <a href="#" class="float-end btn btn-light btn-icon">
                                 <i class="fa fa-heart"></i>
-                            </a>
-                            <a href="#" class="float-start btn btn-light btn-icon">
+                            </a> -->
+                            <!-- <a href="#" class="float-start btn btn-light btn-icon">
                                 <i class="fa fa-shopping-basket"></i>
-                            </a>
+                            </a> -->
                             <a href="" class="title text-truncate text-center">
                                 Apple Watch 
                             </a>
@@ -153,12 +163,12 @@
                             <img src="img/elektronik/3.jpeg" alt="">
                         </a>
                         <figcaption class="info-wrap border-top">
-                            <a href="#" class="float-end btn btn-light btn-icon">
+                            <!-- <a href="#" class="float-end btn btn-light btn-icon">
                                 <i class="fa fa-heart"></i>
-                            </a>
-                            <a href="#" class="float-start btn btn-light btn-icon">
+                            </a> -->
+                            <!-- <a href="#" class="float-start btn btn-light btn-icon">
                                 <i class="fa fa-shopping-basket"></i>
-                            </a>
+                            </a> -->
                             <a href="" class="title text-truncate text-center">
                                 Apple Watch 
                             </a>
@@ -176,12 +186,12 @@
                             <img src="img/elektronik/6.jpeg" alt="">
                         </a>
                         <figcaption class="info-wrap border-top">
-                            <a href="#" class="float-end btn btn-light btn-icon">
+                            <!-- <a href="#" class="float-end btn btn-light btn-icon">
                                 <i class="fa fa-heart"></i>
-                            </a>
-                            <a href="#" class="float-start btn btn-light btn-icon">
+                            </a> -->
+                            <!-- <a href="#" class="float-start btn btn-light btn-icon">
                                 <i class="fa fa-shopping-basket"></i>
-                            </a>
+                            </a> -->
                             <a href="" class="title text-truncate text-center">
                                 Iphone 8 
                             </a>
@@ -199,12 +209,12 @@
                             <img src="img/elektronik/5.jpeg" alt="">
                         </a>
                         <figcaption class="info-wrap border-top">
-                            <a href="#" class="float-end btn btn-light btn-icon">
+                            <!-- <a href="#" class="float-end btn btn-light btn-icon">
                                 <i class="fa fa-heart"></i>
-                            </a>
-                            <a href="#" class="float-start btn btn-light btn-icon">
+                            </a> -->
+                            <!-- <a href="#" class="float-start btn btn-light btn-icon">
                                 <i class="fa fa-shopping-basket"></i>
-                            </a>
+                            </a> -->
                             <a href="" class="title text-truncate text-center">
                                 Apple Watch 
                             </a>
@@ -218,11 +228,12 @@
                 
                 
             </div>
-            <p class="text-center fs-2 text-white fst-italic">İndirim Kodu : BX3Qa8</p>
+           
         </div>
     </section>
 
-    <footer class="py-4 bg-primary">
+    
+    <footer class="py-4 bg-dark">
         <div class="container">
             <div class="row gy-3">
                 <div class="col-md-4">
@@ -258,5 +269,20 @@
         </div>
     </footer>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/public/main.js"></script>
+    <script>
+        const popup = document.querySelector('.popup');
+        const x = document.querySelector('.popup-content h1')
+
+        window.addEventListener('load', () => {
+            popup.classList.add('showPopup');
+            popup.childNodes[1].classList.add('showPopup');
+        })
+        x.addEventListener('click', () => {
+            popup.classList.remove('showPopup');
+            popup.childNodes[1].classList.remove('showPopup');
+        })
+    </script>
+   
 </body> 
 </html>

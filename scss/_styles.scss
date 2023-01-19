@@ -1,5 +1,5 @@
  .top_add{
-    height: 95px;
+    height: 120px;
     width: 100%;
  }
  .top-bar{
@@ -123,3 +123,84 @@
     object-fit: cover;
     cursor: zoom-in;
 }  
+.to-top{
+    background: wheat;
+    position: fixed; 
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+}
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out opacity;
+    z-index: 800;
+}
+.popup-content {
+    width: clamp(300px, 90vw, 500px);
+    background-color: #fff;
+    padding: clamp(1.5rem, 100vw, 3rem);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    border-radius: .5em;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 200ms ease-in-out opacity,
+                200ms ease-in-out transform;
+    position: relative;
+}
+.popup_img{
+    width: 100%;
+    
+}
+.popup h1 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.popup h1:active {
+    transform: scale(.9);
+}
+
+.showPopup {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+.shopping-cart-list{
+    position: absolute;
+    width: 25rem;
+    right: -0.75rem;
+    top: 2.9rem;
+    padding: 1rem;
+    z-index: 81;
+}
+
+.shopping-cart-list .list-item{
+    margin-top: 1rem;
+}
